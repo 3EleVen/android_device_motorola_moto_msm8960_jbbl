@@ -65,13 +65,18 @@ PRODUCT_PACKAGES += \
     mbhc.bin \
     wcd9310_anc.bin
 
-# GPS configuration
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf
 
 # EGL config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/egl.cfg:system/lib/egl/egl.cfg
+# GPS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
+    $(LOCAL_PATH)/gps/lib/libgps.utils.so:system/lib/libgps.utils.so \
+    $(LOCAL_PATH)/gps/lib/libloc_adapter.so:system/lib/libloc_adapter.so \
+    $(LOCAL_PATH)/gps/lib/libloc_eng.so:system/lib/libloc_eng.so \
+    $(LOCAL_PATH)/gps/lib/hw/gps.msm8960.so:system/lib/hw/gps.msm8960.so
+    
 
 # Wifi
 PRODUCT_COPY_FILES += \
