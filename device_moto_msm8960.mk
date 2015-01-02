@@ -120,7 +120,7 @@ PRODUCT_COPY_FILES += \
 
 # Media codecs
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/media_codecs.xml:system/etc/media_codecs.xml
+    $(LOCAL_PATH)/config/media_codecs_aosp.xml:system/etc/media_codecs.xml
 
 # XT90x recovery
 PRODUCT_COPY_FILES += \
