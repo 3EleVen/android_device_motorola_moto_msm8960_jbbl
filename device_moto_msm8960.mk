@@ -63,8 +63,9 @@ PRODUCT_PACKAGES += \
 # Symlinks
 PRODUCT_PACKAGES += \
     mbhc.bin \
-    wcd9310_anc.bin
-
+    wcd9310_anc.bin \
+    WCNSS_qcom_wlan_nv_calibration.bin \
+    WCNSS_qcom_wlan_nv_regulatory.bin
 
 # EGL config
 PRODUCT_COPY_FILES += \
