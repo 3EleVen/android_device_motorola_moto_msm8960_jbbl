@@ -131,6 +131,11 @@ PRODUCT_COPY_FILES += \
 # Include 960x540 boot animation in the zip
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bootanimation/540.zip:system/media/540.zip
+
+# QCOM Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    hw.trueMirrorSupported=1
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-player=true \
@@ -153,6 +158,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.usb.bpt_adb=0x2e29 \
     ro.usb.bpteth=0x2e2a \
     ro.usb.bpteth_adb=0x2e2b \
+    ro.qc.sdk.camera.facialproc=true \
+    ro.qc.sdk.gestures.camera=false \
+    ro.qc.sdk.sensors.gestures=false \
+    persist.gps.qmienabled=true \
+    persist.fuse_sdcard=true \
+    ro.crypto.fuse_sdcard=true \
+    ro.qc.sdk.audio.fluencetype=fluence \
     ro.hdmi.enable=true \
     ro.cwm.forbid_format="/fsg,/firmware,/persist,/modem,/boot"
 
@@ -162,15 +174,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # LTE, CDMA, GSM/WCDMA
 PRODUCT_PROPERTY_OVERRIDES += \
-	telephony.lteOnCdmaDevice=1 \
-	persist.radio.dfr_mode_set=1 \
-	persist.radio.eons.enabled= true \
-	ro.telephony.default_network=10 \
-	persist.radio.mode_pref_nv10=1 \
-	persist.radio.no_wait_for_card=1 \
-	persist.radio.call_type=1 \
-	persist.radio.apm_sim_not_pwdn=1 \
-	persist.timed.enable=true
+    telephony.lteOnCdmaDevice=1 \
+    persist.radio.mode_pref_nv10=1 \
+    persist.radio.no_wait_for_card=1 \
+    persist.radio.dfr_mode_set=1 \
+    persist.rmnet.mux=disabled \
+    persist.radio.eons.enabled=1 \
+    persist.radio.call_type=1 \
+    persist.radio.apm_sim_not_pwdn=1 \
+    persist.timed.enable=true
 
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
