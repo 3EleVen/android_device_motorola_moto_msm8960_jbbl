@@ -105,6 +105,8 @@ PRODUCT_PACKAGES += \
 #ifeq ($(HOST_OS),linux)
 #TARGET_USERIMAGES_USE_F2FS := true
 #endif
+# QRNGD
+PRODUCT_PACKAGES += qrngd
 # TWRP
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
